@@ -1,0 +1,77 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.logo {
+    width: 80px;
+}
+
+.background {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .5;
+    background-size: cover;
+    background-image: url("/img/water.jpg");
+}
+
+.btn {
+    border: 0;
+    border-radius: 50px;
+}
+
+.btn-danger {
+    background-color: orangered;
+}
+
+.btn-primary {
+    background-color: gray;
+}
+
+.btn-success {
+    background-color: blue;
+    margin: 5px 0;
+}
+
+.list-row:hover {
+    transform: scale(1.01);
+    transition: ease-in-out 0.5s all;
+}

@@ -1,0 +1,41 @@
+﻿@page
+@model MVC.WaterLogger.Pages.CreateModel
+@{
+}
+
+<h2>Add New Record</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="DrinkingWater.Date" class="control-label"></label>
+                <input type="date" asp-for="DrinkingWater.Date" class="form-control" />
+                <span asp-validation-for="DrinkingWater.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DrinkingWater.Quantity" class="control-label"></label>
+                <select asp-for="DrinkingWater.Quantity" class="form-select">
+                    <option value="0.5" selected>Bottle (0.5 l)</option>
+                    <option value="1.5">Big Bottle (1.5 l)</option>
+                    <option value="0.25">Glass (0.25 l)</option>
+                    <option value="2.5">Pitcher (2.5 l)</option>
+                </select>
+
+                <span asp-validation-for="DrinkingWater.Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
